@@ -1,0 +1,39 @@
+{
+
+    "name": "A basic Program",
+    "short_name": "Basic PWA",
+    "start_url":"http://127.0.0.1:5500/index.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#ccc",
+    "theme_color": "#5FAAE5",
+    "icons": [
+        {
+            "src": "/icons/sample.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/maybe.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/g.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/splash.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/apple.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+
+}
