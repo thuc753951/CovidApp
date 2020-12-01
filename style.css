@@ -95,7 +95,6 @@
   /* position fixed removes the element from the normal flow, placing it where you specify with top/bottom, left/right */
   position:fixed; 
   top:0px;
-  margin-left: 5%;
   z-index: 1;     /* To make sure titleNav is on top of content, give it a higher z-index than content 
                   (content would have default value of zero). */
   width: 100%;
@@ -103,6 +102,8 @@
   /*box-shadow: 0px 0px 5px black;  /* give a little "3D"  effect to the bottom of the title area */
   min-width: 650px; /* stop nav bar from unwanted overlap with title */
   font-size: 3em;
+  background-color: rgb(255, 125, 125);
+  vertical-align: middle;
 }
 
 .injectContent{
