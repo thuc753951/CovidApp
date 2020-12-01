@@ -1,9 +1,9 @@
-var male = 1;
-var female = 0; 
-var maleNH=0;
-var femaleNH=0;
-(function () {
-    console.log("TEST1");
+function pie_feature() {
+    var content;
+    var male = 1;
+    var female = 0; 
+    var maleNH=0;
+    var femaleNH=0;
     jQuery.ajax({ 
         type: "GET", 
         url: "https://phl.carto.com/api/v2/sql?q=SELECT * FROM covid_hospitalizations_by_sex", 
@@ -31,25 +31,22 @@ var femaleNH=0;
                         break;
                 }
             });
+            var ctx=document.getElementById("chartjs-4").getContext("2d")
+            var myChart= new Chart(ctx,
+            {"type":"doughnut",
+            "data":{
+              "labels":[
+                "Male","Female", "Male not Hostpitalized", "Female not Hostpitalized"],
+              "datasets":[{
+                "label":"My First Dataset",
+              "data":[male,female,maleNH,femaleNH],"backgroundColor":[
+              "rgb(255, 99, 132)",
+              "rgb(54, 162, 235)",
+              "rgb(255, 55, 100)",
+              "rgb(54, 45, 235)"]}]}});
+            console.log("male = " + male); 
+            console.log("female = " + female); 
         }
     
-    });
-})();
-
-function Covid_Gender_inject(){//////////////////Look here to insert the pie chart
-   
-    
-    var content = '<canvas id="chartjs-4" class="chartjs" width="250" height="125" style="display: block; width: 250px; height: 125px;"></canvas>';
-   
-
-    return content;
-};
-
-function getData_Pie(){
-    return({
-        male,
-        female,
-        maleNH,
-        femaleNH,
     });
 }
