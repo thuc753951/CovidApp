@@ -62,13 +62,7 @@
     .header{
         display:none;
     }
-
-    .featureContainer{
-        position:relative;
-        float:none;
-        height:500px
-    }
-
+/*
     #leftScroll{
         position: relative;
         top:75px;
@@ -90,13 +84,13 @@
         height: 150px;
         width: 150px;
     }
-
+*/
     .contentContainer{
         float:none;
-        width: 300px;
+        width: 200px;
         height:300px;
     }
-
+/*
     .navbar.responsive a.icon {
         position: absolute;
         right: 0;
@@ -106,5 +100,5 @@
         float: none;
         display: block;
         text-align: left;
-      }
-}
+      }*/
+} 
