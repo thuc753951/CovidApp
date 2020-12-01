@@ -2,37 +2,51 @@
 
     "name": "A basic Program",
     "short_name": "Basic PWA",
-    "start_url":"http://127.0.0.1:5500/index.html",
+    "start_url":".",
     "display": "standalone",
     "orientation": "portrait",
     "background_color": "#ccc",
     "theme_color": "#5FAAE5",
     "icons": [
         {
-            "src": "/icons/sample.png",
+            "src": "/icons/art1.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/art8.png",
             "sizes": "96x96",
             "type": "image/png"
         },
         {
-            "src": "/icons/maybe.png",
+            "src": "/icons/art2.png",
+            "sizes": "128x128",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/art7.png",
             "sizes": "144x144",
             "type": "image/png"
         },
         {
-            "src": "/icons/g.png",
-            "sizes": "256x256",
+            "src": "/icons/art4.png",
+            "sizes": "152x152",
             "type": "image/png"
         },
         {
-            "src": "/icons/splash.png",
+            "src": "/icons/art5.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/art3.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/art6.png",
             "sizes": "512x512",
             "type": "image/png"
-        },
-        {
-            "src": "/icons/apple.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "maskable"
         }
     ]
 
