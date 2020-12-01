@@ -1,4 +1,4 @@
-var img_list = ["/images/location.svg", "/images/medical-record.png", "/images/clock.svg", "/images/book.png", "/images/medical-file.svg"]
+var img_list = ["/images/location.png", "/images/medical-record.png", "/images/clock.png", "/images/book.png", "/images/medical-file.png"]
 var img_const = ["/images/arrow-left.svg", "/images/arrow-right.svg", "/images/PhillyMap.png.png"]
 var current_feature = ".mapImage"
 
