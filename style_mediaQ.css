@@ -31,7 +31,14 @@
     }
   }
 
-@media only screen and (max-width: 600px){
+  @media only screen and (max-width: 600px){
+    .contentContainer{
+        width: 450px;
+        height: 650px;
+    }
+  }
+
+  @media only screen and (max-width: 600px){
     .header{
         display:none;
     }
