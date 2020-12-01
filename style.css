@@ -79,11 +79,16 @@
   margin-top:5%;
 }
 
-.arrows{
-  position: absolute;
-  z-index: 2;
-  width:40%;
-  height:auto;
+#leftScroll{
+  position: relative;
+  top:225px;
+  right:50px;
+}
+
+#rightScroll{
+  position: relative;
+  top:225px;
+  left:50px
 }
 
 .header {  

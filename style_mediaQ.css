@@ -1,16 +1,34 @@
-@media only screen and (max-width: 950px) {
-    .featureContainer{
-        display: inline;
-        float:right;
-        max-width: 40%;
-        height:225px;
-    
-        margin-left:auto;
-        margin-right:5%;
-        margin-top: 10%;
-        margin-bottom:5%;
+@media only screen and (max-width: 1300px){
+    .contentContainer{
+        width: 450px;
+        height: 500px;
+
+        margin-left:20%;
     }
-    
+  }
+
+  @media only screen and (max-width: 1300px){
+    #leftScroll{
+        position: static;
+        margin-top:50px;
+      }
+      
+      #rightScroll{
+        position: static;
+        margin-top:50px;
+      }
+
+    .featureContainer{
+        position:relative;
+        float:none;
+        height:500px
+    }
+
+    .contentContainer{
+        float:none;
+        height: 400px;
+    }
+
     .featureGrid{
         margin-top:5%;
         overflow-x: scroll;
@@ -18,10 +36,19 @@
         white-space: nowrap;
     
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto auto auto auto auto;
         grid-gap: 5% 5%;
     }
+    .featureTile{
+        text-align:center;
     
+        height: 150px;
+        width: 150px;
+        border:2px solid black;
+    }
+  }
+
+@media only screen and (max-width: 950px) {
     .featureTile{
         text-align:center;
     
@@ -32,26 +59,30 @@
   }
 
   @media only screen and (max-width: 600px){
-    .contentContainer{
-        width: 450px;
-        height: 650px;
-    }
-  }
-
-  @media only screen and (max-width: 600px){
     .header{
         display:none;
     }
 
     .featureContainer{
+        position:relative;
         float:none;
-        width: 70%;
-        height:auto;
-        padding:10%;
+        height:500px
     }
 
+    #leftScroll{
+        position: relative;
+        top:75px;
+        right:5px;
+      }
+      
+      #rightScroll{
+        position: relative;
+        top:75px;
+        left:15px
+      }
+
     .featureGrid{
-        grid-template-columns: auto auto auto auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
         grid-gap: 5% 5%;
     }
 
@@ -62,8 +93,8 @@
 
     .contentContainer{
         float:none;
-        width: 90%;
-        height:auto;
+        width: 300px;
+        height:300px;
     }
 
     .navbar.responsive a.icon {
