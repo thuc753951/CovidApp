@@ -59,7 +59,7 @@ function time_feature() {
                 dataZoom: [
                     {
                         show: true,
-                        start: 94,
+                        start: 0,
                         end: 100
                     },
                     {
