@@ -4,8 +4,9 @@ function chartBuilder(){
     female = data.female;
     maleNH = data.maleNH;
     femaleNH = data.femaleNH;
-  
-    var ctx=document.getElementById("chartjs-4").getContext("2d");
+
+    var ctx=document.getElementById("chartjs-4");
+    ctx = ctx.getContext("2d");
     var myChart = new Chart(ctx,
     {"type":"doughnut",
     "data":{
@@ -19,5 +20,5 @@ function chartBuilder(){
       "rgb(255, 55, 100)",
       "rgb(54, 45, 235)"]}]}});
     console.log("male = " + male); 
-    console.log("female = " + female); 
+    console.log("female = " + female);
 }

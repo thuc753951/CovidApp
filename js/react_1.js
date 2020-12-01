@@ -1,5 +1,7 @@
 var img_list = ["/images/tombstone.png", "/images/book.png", "/images/sex.png", "/images/medical-record.png"]
 var img_const = ["/images/arrow-left.svg", "/images/arrow-right.svg", "/images/PhillyMap.png.png"]
+var current_feature = ".mapImage"
+
 /**
  * Navigation Bar Rendering
  * aboutClick: renders the About Page
@@ -78,24 +80,40 @@ class FeatureContainer extends React.Component {
             ID = {i}
             onClick = {() => {
                 if(i == 0){
-                    ReactDOM.render(<PhillyMap />, document.getElementsByClassName('contentContainer')[0]);
+                    $(current_feature)[0].style.display = 'none';
+                    $(".mapImage")[0].style.display = 'block';
+                    current_feature = ".mapImage";
                 }
                 
                 else if(i == 1){
-                    ReactDOM.render(<PieChart />, document.getElementsByClassName('contentContainer')[0]);
+                    $(current_feature)[0].style.display = 'none';
+                    $("#chartjs-4")[0].style.display = 'block';
+                    current_feature = "#chartjs-4";
                     chartBuilder();
                 }
                 else if(i == 2){
-                    ReactDOM.render(<Timeline />, document.getElementsByClassName('contentContainer')[0]);
+                    $(current_feature)[0].style.display = 'none';
+                    $("#echarts-timeline")[0].style.display = 'block';
+                    current_feature = "#echarts-timeline";
                     timelineBuilder();
                 }
 
                 else if(i == 3){
-                    ReactDOM.render(<AgeChart />, document.getElementsByClassName('contentContainer')[0]);
+                    $(current_feature)[0].style.display = 'none';
+                    $("#echarts-agegraph")[0].style.display = 'block';
+                    current_feature = "#echarts-agegraph";
                     agechartBuilder();
                 }
+                /**
+                 * line 1:sets the display of the currently displayed element to none (current elment ID or Class kept in current_feature)
+                 * line 2:sets the display of target feature to block (manual insertion of the id or class name)
+                 * line 3:sets the current feature to the target feature
+                 * line 4: build the target custom graph
+                 */
                 else{
-                    ReactDOM.render(<RaceChart />, document.getElementsByClassName('contentContainer')[0]);
+                    $(current_feature)[0].style.display = 'none';
+                    $("#echarts-racegraph")[0].style.display = 'block';
+                    current_feature = "#echarts-racegraph";
                     racechartBuilder();
                 }
             }}
@@ -172,7 +190,11 @@ class Content extends React.Component{
     render(){
         return(
             <div className="contentContainer">
-                <img className="mapImage" src = "/images/PhillyMap.png.png" />
+                <PhillyMap />
+                <PieChart />
+                <Timeline />
+                <AgeChart />
+                <RaceChart />
             </div>
         );
     }
@@ -186,6 +208,7 @@ class PieChart extends React.Component{
         display: 'block',
         width: '250px',
         height: '125px',
+        display: 'none',
     };
 
     render(){
@@ -202,6 +225,7 @@ class Timeline extends React.Component{
     timeline_style = {
         width: '100%',
         height: '400px',
+        display: 'none',
     };
 
     render(){
@@ -218,6 +242,7 @@ class AgeChart extends React.Component{
     agechart_style ={
         width:"100%",
         height:"400px",
+        display: 'none',
     };
 
     render(){
@@ -234,6 +259,7 @@ class RaceChart extends React.Component{
     racechart_style = {
         width: "100%",
         height: "400px",
+        display: 'none',
     };
     
     render(){
