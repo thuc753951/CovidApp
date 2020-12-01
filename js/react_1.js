@@ -1,5 +1,5 @@
-var img_list = ["images/tombstone.png", "images/book.png", "images/sex.png", "images/medical-record.png"]
-var img_const = ["images/arrow-left.svg", "images/arrow-right.svg", "images/PhillyMap.png.png"]
+var img_list = ["/images/tombstone.png", "/images/book.png", "/images/sex.png", "/images/medical-record.png"]
+var img_const = ["/images/arrow-left.svg", "/images/arrow-right.svg", "/images/PhillyMap.png.png"]
 var current_feature = ".mapImage"
 
 /**
