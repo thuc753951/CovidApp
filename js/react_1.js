@@ -1,4 +1,4 @@
-var img_list = ["images\location.png", "images\medical-record.png", "images\clock.png", "images\book.png", "images\medical-file.png"]
+var img_list = ["/images/location.png", "/images/medical-record.png", "/images/clock.png", "/images/book.png", "/images/medical-file.png"]
 var img_const = ["/images/arrow-left.svg", "/images/arrow-right.svg", "/images/PhillyMap.png.png"]
 var current_feature = ".mapImage"
 
@@ -207,7 +207,7 @@ class PieChart extends React.Component{
     chart_style = {
         display: 'block',
         width: '250px',
-        height: '125px',
+        height: 'auto',
         display: 'none',
     };
 
@@ -224,7 +224,7 @@ class PieChart extends React.Component{
 class Timeline extends React.Component{
     timeline_style = {
         width: '100%',
-        height: '400px',
+        height: '50%',
         display: 'none',
     };
 
@@ -241,7 +241,7 @@ class Timeline extends React.Component{
 class AgeChart extends React.Component{
     agechart_style ={
         width:"100%",
-        height:"400px",
+        height:"50%",
         display: 'none',
     };
 
@@ -258,7 +258,7 @@ class AgeChart extends React.Component{
 class RaceChart extends React.Component{
     racechart_style = {
         width: "100%",
-        height: "400px",
+        height: "50%",
         display: 'none',
     };
     
