@@ -207,7 +207,7 @@ class PieChart extends React.Component{
     chart_style = {
         display: 'block',
         width: '250px',
-        height: 'auto',
+        height: '125px',
         display: 'none',
     };
 
@@ -224,7 +224,7 @@ class PieChart extends React.Component{
 class Timeline extends React.Component{
     timeline_style = {
         width: '100%',
-        height: '50%',
+        height: '400px',
         display: 'none',
     };
 
@@ -241,7 +241,7 @@ class Timeline extends React.Component{
 class AgeChart extends React.Component{
     agechart_style ={
         width:"100%",
-        height:"50%",
+        height:"400px",
         display: 'none',
     };
 
@@ -258,7 +258,7 @@ class AgeChart extends React.Component{
 class RaceChart extends React.Component{
     racechart_style = {
         width: "100%",
-        height: "50%",
+        height: "400px",
         display: 'none',
     };
     
