@@ -1,4 +1,4 @@
-var img_list = ["/images/tombstone.png", "/images/book.png", "/images/sex.png", "/images/medical-record.png"]
+var img_list = ["images/location.svg", "/images/medical-record.png", "/images/clock.svg", "/images/book.png", "/images/medical-file.svg"]
 var img_const = ["/images/arrow-left.svg", "/images/arrow-right.svg", "/images/PhillyMap.png.png"]
 var current_feature = ".mapImage"
 
@@ -39,6 +39,7 @@ class FeatureTile extends React.Component{
         this.state = {
             img: this.props.img,
             ID: this.props.ID,
+            title: this.props.title,
             onClick: this.props.onClick,
         };
     }
@@ -46,7 +47,7 @@ class FeatureTile extends React.Component{
     render(){
         return(
             <div className = "featureTile">
-                <div className ="featureTitle">Feature {this.props.ID}</div>
+                <div className ="featureTitle">{this.props.title}</div>
                 <img src={this.state.img} onClick = {() => this.state.onClick()}></img>
             </div>
         );
@@ -73,11 +74,12 @@ function Arrows(props){
  * returns Arrow component with defined onClick functions using JQuery, filled featureGrid using renderTile(i), contained in div wrapper
  */
 class FeatureContainer extends React.Component {
-    renderTile(i){
+    renderTile(i, ftitle){
         return(
             <FeatureTile
-            img = {img_list[i%3]}
+            img = {img_list[i]}
             ID = {i}
+            title = {ftitle}
             onClick = {() => {
                 if(i == 0){
                     $(current_feature)[0].style.display = 'none';
@@ -138,11 +140,11 @@ class FeatureContainer extends React.Component {
                 }
             }/>
                 <div className = "featureGrid">
-                    {this.renderTile(0)}
-                    {this.renderTile(1)}
-                    {this.renderTile(2)}
-                    {this.renderTile(3)}
-                    {this.renderTile(4)}
+                    {this.renderTile(0, "Map")}
+                    {this.renderTile(1, "Hospitalization")}
+                    {this.renderTile(2, "Timeline")}
+                    {this.renderTile(3, "Cases by Age")}
+                    {this.renderTile(4, "Cases by Race")}
                 </div>
             </div>
         );
