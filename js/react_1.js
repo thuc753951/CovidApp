@@ -286,8 +286,21 @@ class CovidPage extends React.Component{
 class AboutPage extends React.Component{
     render(){
         return(
-            <div>
-                <h1>Temporary About</h1>
+            <div id="renderPage">
+                <Header />
+                <div className = "content">
+                    <h1>About</h1>
+                    <h2>Product Vision</h2>
+                    <div>This app is made for any Philadelphia citizen, general to race, sex, and age. Over the past year COVID-19 has been very persistent in Philadelphia, this app is made for any citizen who is interested in the current state of COVID related statistics. The Covid Resource app is a lifestyle product. It is made to provide information in order to better or protect the day to day lives of its users. We want to create an application that gives the client updated information on the statistics of COVID in the Philadelphia are, this data will have specifics filtering choices such as age, sex, and race. Along with the filtering choices it will have some data categories such as death rate, confirmed cases (by zip or date), info on testing sites, and other information that can be derived from the open datasets provided by Philadelphia. Unlike other COVID related applications the COVID Resource App offers pure data and information specified for the area of Philadelphia. Other apps involve contact tracing, citizen health submissions, and self monitoring. The proposed Covid Resource Application is a source for COVID related statistics in the Philadelphia area. With a diverse population this app tries to personalize the information being presented to the client by offering different information categories and filtering choices so that the data viewed is as relevant as possible.</div>
+                    <h2>Target Audience</h2>
+                    <div></div>
+                    <h2>Javascript Libraries Used</h2>
+                    <div></div>
+                    <h2>Team Members</h2>
+                    <div></div>
+                    <h2>Github Repo Link</h2>
+                    <div></div>
+                </div>
                 <Navbar />
             </div>
         );

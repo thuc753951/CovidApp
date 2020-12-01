@@ -60,9 +60,10 @@ function age_feature() {
                     }
                 },
                 title: {
-                    text: 'Philly Covid Cases by Age'
+                    text: 'Covid Cases by Age'
                 }, //bitter google
                 legend: {
+                    right: '10%',
                     data: ['Hospitalized', 'Not Hospitalized/Unknown']
                 },
                 grid: {
