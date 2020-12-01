@@ -1,5 +1,4 @@
-var retData;
-(function() {
+function race_feature() {
     jQuery.ajax({ 
         type: "GET", 
         url: "https://phl.carto.com/api/v2/sql?q=SELECT * FROM covid_hospitalizations_by_race ORDER BY racial_identity", 
@@ -165,8 +164,4 @@ var retData;
             timelineChart.setOption(option);
         }
     });
-})();
-
-function getData_Race(){
-    return retData;
-}
+};

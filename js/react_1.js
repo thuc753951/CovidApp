@@ -89,20 +89,20 @@ class FeatureContainer extends React.Component {
                     $(current_feature)[0].style.display = 'none';
                     $("#chartjs-4")[0].style.display = 'block';
                     current_feature = "#chartjs-4";
-                    chartBuilder();
+                    pie_feature();
                 }
                 else if(i == 2){
                     $(current_feature)[0].style.display = 'none';
                     $("#echarts-timeline")[0].style.display = 'block';
                     current_feature = "#echarts-timeline";
-                    timelineBuilder();
+                    time_feature();
                 }
 
                 else if(i == 3){
                     $(current_feature)[0].style.display = 'none';
                     $("#echarts-agegraph")[0].style.display = 'block';
                     current_feature = "#echarts-agegraph";
-                    agechartBuilder();
+                    age_feature();
                 }
                 /**
                  * line 1:sets the display of the currently displayed element to none (current elment ID or Class kept in current_feature)
@@ -114,7 +114,7 @@ class FeatureContainer extends React.Component {
                     $(current_feature)[0].style.display = 'none';
                     $("#echarts-racegraph")[0].style.display = 'block';
                     current_feature = "#echarts-racegraph";
-                    racechartBuilder();
+                    race_feature();
                 }
             }}
             />
@@ -143,8 +143,6 @@ class FeatureContainer extends React.Component {
                     {this.renderTile(2)}
                     {this.renderTile(3)}
                     {this.renderTile(4)}
-                    {this.renderTile(5)}
-                    {this.renderTile(6)}
                 </div>
             </div>
         );
