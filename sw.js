@@ -46,6 +46,7 @@ const assets = [ //assests to be loaded into memory
     'https://phl.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20covid_hospitalizations_by_race%20ORDER%20BY%20racial_identity',
     'https://phl.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20covid_hospitalizations_by_age%20ORDER%20BY%20age',
     'https://phl.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20covid_hospitalizations_by_sex',
+    'https://phl.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20covid_hospitalizations_by_date%20ORDER%20BY%20date',
     
 ];
 
