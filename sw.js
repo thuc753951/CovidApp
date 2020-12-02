@@ -1,4 +1,4 @@
-const staticCacheName = 'site-static-v1'; // remember to change this name 'site-static' every time you change the files loaded in cache ex: 'site-static-v1'.... v2....v3...etc
+const staticCacheName = 'site-static'; // remember to change this name 'site-static' every time you change the files loaded in cache ex: 'site-static-v1'.... v2....v3...etc
 
 const dynamicCache = 'site-dynamic'; // a cache for automatically saving pages the user has already visited to let them browse offline
 
