@@ -1,8 +1,3 @@
-import React from "react";
-import {MapContainer, GeoJSON,} from "react-leaflet";
-import Zipcodes from './data/Boundary.json';
-import "leaflet/dist/leaflet.css";
-import "./Mymap.css";
 
 var img_list = ["images/location.png", "images/medical-record.png", "images/clock.png", "images/book.png", "images/medical-file.png"]
 var img_const = ["images/arrow-left.svg", "images/arrow-right.svg", "images/PhillyMap.png.png"]
@@ -177,49 +172,18 @@ class Header extends React.Component{
  * returns image
  */
 class PhillyMap extends React.Component {
+   constructor(props){
+        super(props);
+        this.state = {
+            img : img_const[2],
+        };
+    }
+    render(){
+        return(
+            <img className="mapImage" src = {"https://gist.github.com/thuc753951/15ebd419b46ac5974eb3cb19619bc875.js"} />
+        );
+    }
    
-    state = { }
-
-    statestyle = {
-        fillColor: "lightblue",
-        fillOpacity: 0.5,
-    }
-
-    onEachState = (county, layer) =>{ 
-        const countyNum = county.properties.OBJECTID; 
-        layer.bindPopup(countyNum + " hello");  /*pop up layer that shows a message everytime you click in a location on the map */
-
-        layer.on({
-            click: (event)=>{
-                event.target.setStyle( /*event handler for everytime we click it turns the spots yellow */
-                    {
-                        color: "yellow",
-                        fillColor: "yellow",
-                        fillOpacity: 0.5,
-                    }
-                )
-            },
-            mouseover: (event) =>{ /*event handler for everytime we mouse over something it turns the spots white */
-                event.target.setStyle({
-                    color: "white", 
-                    fillColor: "lightblue",
-                });
-            }
-        })
-    }
-    render() { 
-        return (
-        <div id="bounds">
-            <h1 style={{textAlign: "center"}}>My Map</h1>
-            <MapContainer className="map"
-                center= {[40.018669892320197,-75.215331051386997 ]}  /*centers the camera to philadelphia */
-                zoom={11.5} /*sets the zoom of the initial view  */
-                scrollWheelZoom={true}>
-                <GeoJSON style={this.statestyle} data={Zipcodes.features} onEachFeature={this.onEachState}></GeoJSON> 
-            </MapContainer>
-        </div> 
-        
-    )};
 }
 /**
  * returns div for holding content, default is image of philly
