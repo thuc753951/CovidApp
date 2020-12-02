@@ -40,6 +40,7 @@ function pie_feature() {
               "datasets":[{
                 "label":"My First Dataset",
               "data":[male,female,maleNH,femaleNH],"backgroundColor":[
+                  //note color has to be hard coded in, this is not data.
               "rgb(255, 99, 132)",
               "rgb(54, 162, 235)",
               "rgb(255, 55, 100)",
