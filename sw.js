@@ -67,18 +67,39 @@ self.addEventListener('activate',evt => {
     );
 });
 
-//fetch event
-self.addEventListener('fetch',evt => {
-    //console.log('fetch event',evt);
-    evt.respondWith(
-        caches.match(evt.request).then(cacheRes=>{
-             // return info in caches or the regular fetch event using online
-            return cacheRes || fetch(evt.request).then(fetchRes => {
-                return caches.open(dynamicCache).then(cache =>{
-                    cache.put(evt.request.url, fetchRes.clone());
-                    return fetchRes;
-                })
-            });
-        })
-    );
+// fetch event
+self.addEventListener('fetch', evt => {
+  // check if request is made by chrome extensions or web page
+  // if request is made for web page url must contains http.
+  if (!(evt.request.url.indexOf('http') === 0)) return; // skip the request. if request is not made with http protocol
+
+  evt.respondWith(
+    caches
+      .match(evt.request)
+      .then(
+        cacheRes =>
+          cacheRes ||
+          fetch(evt.request).then(fetchRes =>
+            caches.open(dynamicNames).then(cache => {
+              cache.put(evt.request.url, fetchRes.clone());
+              // check cached items size
+              limitCacheSize(dynamicNames, 75);
+              return fetchRes;
+            })
+          )
+      )
+      .catch(() => caches.match('/fallback'))
+  );
 });
+
+// cache size limit function
+const limitCacheSize = (name, size) => {
+  caches.open(name).then(cache => {
+    cache.keys().then(keys => {
+      if (keys.length > size) {
+        cache.delete(keys[0]).then(limitCacheSize(name, size));
+      }
+    });
+  });
+};
+
