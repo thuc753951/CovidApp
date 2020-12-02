@@ -37,16 +37,19 @@
             "src": "/icons/art5.png",
             "sizes": "192x192",
             "type": "image/png"
+            "purpose": "maskable"
         },
         {
             "src": "/icons/art3.png",
             "sizes": "384x384",
             "type": "image/png"
+            "purpose": "maskable"
         },
         {
             "src": "/icons/art6.png",
             "sizes": "512x512",
             "type": "image/png"
+            "purpose": "maskable"
         }
     ]
 
