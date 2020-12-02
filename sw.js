@@ -20,7 +20,6 @@ const assets = [ //assests to be loaded into memory
     '/js/min js/reac_dev.js',
     '/js/min js/react_dom_dev.js',
     '/js/min js/slim.js',
-    '/UI.js',
     '/style.css',
     '/style_mediaQ.css',
     '/images/book.png',
