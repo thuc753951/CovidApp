@@ -43,6 +43,9 @@ const assets = [ //assests to be loaded into memory
     'https://fonts.googleapis.com/css?family=Bitter',
     'https://fonts.gstatic.com/s/bitter/v16/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8fbfOLXOXWh2.woff2',
     'https://fonts.gstatic.com/s/bitter/v16/raxhHiqOu8IVPmnRc6SY1KXhnF_Y8fbfOLjOXQ.woff2',
+    'https://phl.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20covid_hospitalizations_by_race%20ORDER%20BY%20racial_identity',
+    'https://phl.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20covid_hospitalizations_by_age%20ORDER%20BY%20age',
+    'https://phl.carto.com/api/v2/sql?q=SELECT%20*%20FROM%20covid_hospitalizations_by_sex',
     
 ];
 
